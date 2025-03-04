@@ -7,7 +7,6 @@ public class Armstrong {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number to check whether it is an armstrong number or not: ");
         int num = sc.nextInt();
-        isArmstrong(num,countDigits(num));
         if(isArmstrong(num,countDigits(num)))
         {
             System.out.println("The number that you've entered is an armstrong number");

@@ -1,0 +1,44 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+    class Vehicle {
+    String brand;
+    String model;
+    int year;
+    double price;
+    
+    Vehicle(String brand, String model, int year, double price)
+    {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.price = price;
+    }
+    
+    void displayInfo()
+    {
+        System.out.println(this.brand + " " + this.model + " " + this.year + " " + this.price);
+    }
+    
+    boolean isLuxury()
+    {
+        if(this.price >= 3000000) return true;
+        return false;
+    }
+}
+
+  class Cars{
+    public static void main(String args[])
+    {
+        Vehicle v1 = new Vehicle("Hyundai", "Petrol DCT", 2025, 4000000);
+        v1.displayInfo();
+        System.out.println(v1.isLuxury());
+        Vehicle v2 = new Vehicle("Maruti_Suzuki", "Hybrid_e-CVT", 2025, 3500000);
+        v2.displayInfo();
+        System.out.println(v2.isLuxury());
+        Vehicle v3 = new Vehicle("Tata", "Nexon_EV", 2025, 1800000);
+        v3.displayInfo();
+        System.out.println(v3.isLuxury());
+    }
+}
